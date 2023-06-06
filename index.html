@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleGpt.css" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,35 +19,60 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="inner">
       <div class="welcome">
-        <span><a href="#">Welcome to our online store!</a></span>
-        <span
+        <span ><a class="word" href="#">Welcome to our online store!</a></span>
+        <span class="account"
           ><a href="#"
             ><i class="fa-solid fa-user"></i></i></i>JOIN FREE OR SIGN IN</a
-          ></span
+          >
+          <div class="acountBoard">
+            <a href="#">Sign In</a>
+            <a href="#">Register</a>
+            <a href="#">Check Out</a>
+            <a href="#">Compare(<span>0</span>)</a>
+          </div>
+          </span
         >
       </div>
       <div class="logo">
        <img src="./images/svgviewer-output.webp" alt="logo">
-       <span class="searchBoxContainer">
+       <label class="searchBoxContainer" for="searchBox">
          <input type="text" name="searchBox" id="searchBox" placeholder="Enter keyword...">
          <span class= searchIconContainer>
           <i class="fa-solid fa-magnifying-glass"></i>
-         </span>
+         </label>
          
        </span>
-       <a href="#" class="wishList">
+       <a href="#" class="wishList one">
         <i class="fa-regular fa-heart"></i>
         <span>Wishlist<br>
         <span>0</span> Item(s)</span>
         </a>
-        <a href="#">
+        <a href="#" class="cart one">
         <i class="fa-solid fa-bag-shopping"></i>
         <span>Cart<br>
         $<span>0.00</span></span>
         </a>
       </div>
     </header>
+    <nav class="navBar inner">
+      <a href="#" class="home">HOME
+        <div class="homeContainer"></div>
+      </a>
+      <a href="#" class="shop">SHOP
+        <div class="shopContainer"></div>
+      </a>
+      <a href="#" class="page">PAGE
+        <div class="pageContainer"></div>
+      </a>
+      <a href="#" class="blog">BLOG</a>
+      <a href="#" class="contact">CONTACT</a>
+    </nav>
+
+
+
+
+    <script src="style.js"></script>
   </body>
 </html>
