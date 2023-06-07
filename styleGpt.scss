@@ -190,3 +190,32 @@ span.account {
     }
   }
 }
+
+.navBar {
+  display: flex;
+  a:nth-child(-n + 3) {
+    // background-color: green;
+    > div {
+      position: absolute;
+      width: 100vw;
+      // height: 100px;
+      padding-bottom: 8rem;
+      background-color: green;
+      visibility: hidden;
+      opacity: 0;
+      left: 0;
+      transform: translateY(5rem);
+      transition: all 0.3s ease-in-out;
+      &.third {
+        width: 100px;
+        background-color: red;
+        left: auto;
+      }
+    }
+    &:hover > div {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(1.3rem);
+    }
+  }
+}

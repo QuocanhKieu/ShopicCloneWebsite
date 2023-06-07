@@ -1,4 +1,6 @@
-const home = document.querySelector(".homeContainer");
+const home = document.querySelector(".home");
+const shop = document.querySelector(".shop");
+const page = document.querySelector(".home");
 console.log(home);
 
 let homeText = [
@@ -9,3 +11,5 @@ let homeText = [
   "Tea Shop",
   "Pet Shop",
 ];
+
+

@@ -162,4 +162,29 @@ span.account .acountBoard:hover {
 
 .welcome span a.word:hover {
   color: rgba(0, 68, 255, 0.938);
+}
+
+.navBar {
+  display: flex;
+}
+.navBar a:nth-child(-n+3) > div {
+  position: absolute;
+  width: 100vw;
+  padding-bottom: 8rem;
+  background-color: green;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  transform: translateY(5rem);
+  transition: all 0.3s ease-in-out;
+}
+.navBar a:nth-child(-n+3) > div.third {
+  width: 100px;
+  background-color: red;
+  left: auto;
+}
+.navBar a:nth-child(-n+3):hover > div {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(1.3rem);
 }/*# sourceMappingURL=styleGpt.css.map */
