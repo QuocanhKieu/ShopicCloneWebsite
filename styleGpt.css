@@ -1,0 +1,229 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  width: 100vw;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #000;
+  background: linear-gradient(180deg, #f5f5f5 36%, #fff 36%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 2rem;
+  display: block;
+}
+
+.welcome,
+.logo {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1.6rem;
+}
+
+.inner {
+  max-width: 130rem;
+  width: 100%;
+  padding-inline: 2rem;
+}
+
+.searchBoxContainer {
+  width: 62rem;
+  background-color: #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  position: relative;
+  align-self: center;
+}
+.searchBoxContainer .searchIconContainer {
+  display: inline-block;
+  height: 4.5rem;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 4.5rem;
+}
+.searchBoxContainer .searchIconContainer.searchIconContainer:hover {
+  cursor: pointer;
+}
+.searchBoxContainer .searchIconContainer .fa-magnifying-glass {
+  font-size: 2rem;
+}
+.searchBoxContainer #searchBox {
+  background-color: #ececec;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+}
+
+.fa-user {
+  padding-right: 1rem;
+}
+
+.one {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  cursor: pointer;
+}
+.one:hover {
+  color: #fd0202;
+}
+.one.wishList .one.wishList {
+  margin-inline: 3rem 4%;
+}
+.one i {
+  font-size: 3rem;
+  color: rgb(255, 123, 0);
+}
+.one i,
+.one span:hover {
+  cursor: pointer;
+}
+
+img[alt=logo] {
+  margin-right: 10rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.navBar a {
+  color: white;
+  margin-right: 3rem;
+  padding-block: 1rem;
+}
+.navBar a:first-child {
+  border-bottom: 0.3rem solid #fd0202;
+  color: #fd0202;
+}
+.navBar a:hover {
+  border-bottom: 0.3rem solid #fd0202;
+  color: #fd0202;
+}
+.navBar a:nth-child(-n+3)::after {
+  content: "+";
+}
+
+span.account {
+  position: relative;
+  padding-bottom: 1rem;
+}
+span.account .acountBoard {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  row-gap: 2rem;
+  box-shadow: 0px 0px 1px #535151;
+  background-color: white;
+  color: #535151;
+  width: 85%;
+  top: 100%;
+  right: 0;
+  font-size: 0.9em;
+  height: 0;
+  justify-content: center;
+  padding-inline: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 0.5s ease-in-out, height 0.7s ease-in-out;
+  overflow-y: hidden;
+}
+span.account .acountBoard a:hover {
+  color: #959595;
+}
+span.account:hover .acountBoard,
+span.account .acountBoard:hover {
+  height: 17rem;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s ease-in-out, height 0.3s ease-in-out;
+}
+
+.welcome span a.word:hover {
+  color: #0242f1;
+}
+
+.navBar {
+  display: flex;
+}
+.navBar a:nth-child(-n+3) > div {
+  position: absolute;
+  width: 100vw;
+  padding-bottom: 8rem;
+  background-color: green;
+  visibility: hidden;
+  opacity: 0;
+  left: 0;
+  transform: translateY(5rem);
+  transition: all 0.3s ease-in-out;
+}
+.navBar a:nth-child(-n+3) > div.third {
+  width: 100px;
+  background-color: #ff0000;
+  left: auto;
+}
+.navBar a:nth-child(-n+3):hover > div {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(1.3rem);
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 130rem !important;
+  padding-inline: calc((100vw - 130rem) / 2);
+  align-items: start;
+}
+.homeContainer .homeElement {
+  color: #0c0c17;
+  margin-block: 0.5rem;
+}
+.homeContainer .homeElement:hover {
+  color: #ff0000;
+}
+.homeContainer .homeElement:hover .red {
+  padding-inline: 0.25rem;
+  background-color: #ff0000;
+  margin-right: 1rem;
+  margin-left: 0rem;
+}
+.homeContainer .homeElement .red {
+  display: inline-block;
+  height: 0.6rem;
+  background: #0c0c17;
+  margin-right: 0.1rem;
+  margin-left: 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+.homeContainer .homeElement a {
+  border: none;
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.homeContainer .homeElement a:hover {
+  border: none;
+  color: #ff0000;
+}/*# sourceMappingURL=styleGpt.css.map */
