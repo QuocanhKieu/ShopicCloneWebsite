@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const home = document.querySelector(".homeContainer");
+=======
+const home = document.querySelector(".home");
+>>>>>>> origin/master
 const shop = document.querySelector(".shop");
 const page = document.querySelector(".home");
 console.log(home);
@@ -12,6 +16,7 @@ let homeText = [
   "Pet Shop",
 ];
 
+<<<<<<< HEAD
 homeText.forEach((item, index, arrAdd) => {
   const redSquare = document.createElement("span");
   redSquare.classList.add("red", "square");
@@ -28,3 +33,6 @@ homeText.forEach((item, index, arrAdd) => {
   home.appendChild(container);
 });
 console.log(home);
+=======
+
+>>>>>>> origin/master

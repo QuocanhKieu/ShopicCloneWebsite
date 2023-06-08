@@ -9,7 +9,10 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+<<<<<<< HEAD
   width: 100vw;
+=======
+>>>>>>> origin/master
 }
 
 body {
@@ -41,7 +44,11 @@ header {
 .inner {
   max-width: 130rem;
   width: 100%;
+<<<<<<< HEAD
   padding-inline: 2rem;
+=======
+  margin: auto;
+>>>>>>> origin/master
 }
 
 .searchBoxContainer {
@@ -162,7 +169,11 @@ span.account .acountBoard:hover {
 }
 
 .welcome span a.word:hover {
+<<<<<<< HEAD
   color: #0242f1;
+=======
+  color: rgba(0, 68, 255, 0.938);
+>>>>>>> origin/master
 }
 
 .navBar {
@@ -181,13 +192,18 @@ span.account .acountBoard:hover {
 }
 .navBar a:nth-child(-n+3) > div.third {
   width: 100px;
+<<<<<<< HEAD
   background-color: #ff0000;
+=======
+  background-color: red;
+>>>>>>> origin/master
   left: auto;
 }
 .navBar a:nth-child(-n+3):hover > div {
   visibility: visible;
   opacity: 1;
   transform: translateY(1.3rem);
+<<<<<<< HEAD
 }
 
 .homeContainer {
@@ -226,4 +242,6 @@ span.account .acountBoard:hover {
 .homeContainer .homeElement a:hover {
   border: none;
   color: #ff0000;
+=======
+>>>>>>> origin/master
 }/*# sourceMappingURL=styleGpt.css.map */

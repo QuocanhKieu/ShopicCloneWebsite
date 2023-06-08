@@ -5,8 +5,12 @@ $var-color4: #ececec;
 $var-color5: #959595;
 $var-color6: #fd0202;
 $var-color7: #535151;
+<<<<<<< HEAD
 $var-color8: #0242f1;
 $var-color9: #ff0000;
+=======
+$var-color8: rgba(0, 68, 255, 0.938);
+>>>>>>> origin/master
 
 *,
 ::after,
@@ -19,7 +23,10 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+<<<<<<< HEAD
   width: 100vw;
+=======
+>>>>>>> origin/master
 }
 
 body {
@@ -52,7 +59,11 @@ header {
 .inner {
   max-width: 130rem;
   width: 100%;
+<<<<<<< HEAD
   padding-inline: 2rem;
+=======
+  margin: auto;
+>>>>>>> origin/master
 }
 
 .searchBoxContainer {
@@ -210,7 +221,11 @@ span.account {
       transition: all 0.3s ease-in-out;
       &.third {
         width: 100px;
+<<<<<<< HEAD
         background-color: $var-color9;
+=======
+        background-color: red;
+>>>>>>> origin/master
         left: auto;
       }
     }
@@ -221,6 +236,7 @@ span.account {
     }
   }
 }
+<<<<<<< HEAD
 .homeContainer {
   display: flex;
   flex-direction: column;
@@ -262,3 +278,5 @@ span.account {
     }
   }
 }
+=======
+>>>>>>> origin/master
