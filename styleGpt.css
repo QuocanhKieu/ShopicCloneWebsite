@@ -9,16 +9,20 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-<<<<<<< HEAD
-  width: 100vw;
-=======
->>>>>>> origin/master
 }
 
 body {
   font-size: 1.6rem;
   color: #000;
   background: linear-gradient(180deg, #f5f5f5 36%, #fff 36%);
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 130rem;
+  padding-inline: 2rem;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 a {
@@ -42,17 +46,10 @@ header {
 }
 
 .inner {
-  max-width: 130rem;
-  width: 100%;
-<<<<<<< HEAD
   padding-inline: 2rem;
-=======
-  margin: auto;
->>>>>>> origin/master
 }
 
 .searchBoxContainer {
-  width: 62rem;
   background-color: #ececec;
   display: flex;
   justify-content: space-between;
@@ -60,6 +57,7 @@ header {
   padding-left: 1.5rem;
   position: relative;
   align-self: center;
+  width: 50%;
 }
 .searchBoxContainer .searchIconContainer {
   display: inline-block;
@@ -68,7 +66,6 @@ header {
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
-  width: 4.5rem;
 }
 .searchBoxContainer .searchIconContainer.searchIconContainer:hover {
   cursor: pointer;
@@ -81,6 +78,7 @@ header {
   font-size: 1.6rem;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .fa-user {
@@ -110,7 +108,7 @@ header {
 }
 
 img[alt=logo] {
-  margin-right: 10rem;
+  margin-right: 5%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -145,7 +143,6 @@ span.account .acountBoard {
   box-shadow: 0px 0px 1px #535151;
   background-color: white;
   color: #535151;
-  width: 85%;
   top: 100%;
   right: 0;
   font-size: 0.9em;
@@ -169,11 +166,7 @@ span.account .acountBoard:hover {
 }
 
 .welcome span a.word:hover {
-<<<<<<< HEAD
   color: #0242f1;
-=======
-  color: rgba(0, 68, 255, 0.938);
->>>>>>> origin/master
 }
 
 .navBar {
@@ -181,36 +174,31 @@ span.account .acountBoard:hover {
 }
 .navBar a:nth-child(-n+3) > div {
   position: absolute;
-  width: 100vw;
   padding-bottom: 8rem;
-  background-color: green;
   visibility: hidden;
   opacity: 0;
+  width: 100%;
+  max-width: 130rem;
+  margin: auto;
   left: 0;
+  right: 0;
   transform: translateY(5rem);
   transition: all 0.3s ease-in-out;
 }
 .navBar a:nth-child(-n+3) > div.third {
-  width: 100px;
-<<<<<<< HEAD
   background-color: #ff0000;
-=======
-  background-color: red;
->>>>>>> origin/master
-  left: auto;
+  left: unset;
+  right: unset;
 }
 .navBar a:nth-child(-n+3):hover > div {
   visibility: visible;
   opacity: 1;
   transform: translateY(1.3rem);
-<<<<<<< HEAD
 }
 
 .homeContainer {
   display: flex;
   flex-direction: column;
-  width: 130rem !important;
-  padding-inline: calc((100vw - 130rem) / 2);
   align-items: start;
 }
 .homeContainer .homeElement {
@@ -242,6 +230,23 @@ span.account .acountBoard:hover {
 .homeContainer .homeElement a:hover {
   border: none;
   color: #ff0000;
-=======
->>>>>>> origin/master
+}
+
+.editWishList {
+  white-space: nowrap;
+}
+
+.page {
+  position: relative;
+}
+
+.outerContainer {
+  min-width: 100vw;
+  background-color: #eee;
+  position: absolute;
+  left: 20rem;
+}
+
+.home {
+  position: relative;
 }/*# sourceMappingURL=styleGpt.css.map */

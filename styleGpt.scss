@@ -5,12 +5,8 @@ $var-color4: #ececec;
 $var-color5: #959595;
 $var-color6: #fd0202;
 $var-color7: #535151;
-<<<<<<< HEAD
 $var-color8: #0242f1;
 $var-color9: #ff0000;
-=======
-$var-color8: rgba(0, 68, 255, 0.938);
->>>>>>> origin/master
 
 *,
 ::after,
@@ -23,16 +19,21 @@ html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-<<<<<<< HEAD
-  width: 100vw;
-=======
->>>>>>> origin/master
 }
 
 body {
   font-size: 1.6rem;
   color: #000;
   background: linear-gradient(180deg, $var-color1 36%, $var-color3 36%);
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 130rem;
+  padding-inline: 2rem;
+  box-sizing: border-box;
+  margin: auto;
+  // position: relative;
 }
 
 a {
@@ -57,17 +58,10 @@ header {
 }
 
 .inner {
-  max-width: 130rem;
-  width: 100%;
-<<<<<<< HEAD
   padding-inline: 2rem;
-=======
-  margin: auto;
->>>>>>> origin/master
 }
 
 .searchBoxContainer {
-  width: 62rem;
   background-color: #ececec;
   display: flex;
   justify-content: space-between;
@@ -75,7 +69,7 @@ header {
   padding-left: 1.5rem;
   position: relative;
   align-self: center;
-
+  width: 50%;
   .searchIconContainer {
     display: inline-block;
     height: 4.5rem;
@@ -83,7 +77,6 @@ header {
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
-    width: 4.5rem;
 
     &.searchIconContainer:hover {
       cursor: pointer;
@@ -99,6 +92,7 @@ header {
     font-size: 1.6rem;
     border: none;
     outline: none;
+    width: 100%;
   }
 }
 
@@ -132,7 +126,7 @@ header {
 }
 
 img[alt="logo"] {
-  margin-right: 10rem;
+  margin-right: 5%;
   object-fit: contain;
 }
 
@@ -169,7 +163,6 @@ span.account {
     box-shadow: 0px -0px 1px $var-color7;
     background-color: white;
     color: $var-color7;
-    width: 85%;
     top: 100%;
     right: 0;
     font-size: 0.9em;
@@ -210,23 +203,21 @@ span.account {
     // background-color: green;
     > div {
       position: absolute;
-      width: 100vw;
       // height: 100px;
       padding-bottom: 8rem;
-      background-color: green;
       visibility: hidden;
       opacity: 0;
+      width: 100%;
+      max-width: 130rem;
+      margin: auto;
       left: 0;
+      right: 0;
       transform: translateY(5rem);
       transition: all 0.3s ease-in-out;
       &.third {
-        width: 100px;
-<<<<<<< HEAD
         background-color: $var-color9;
-=======
-        background-color: red;
->>>>>>> origin/master
-        left: auto;
+        left: unset;
+        right: unset;
       }
     }
     &:hover > div {
@@ -236,12 +227,11 @@ span.account {
     }
   }
 }
-<<<<<<< HEAD
 .homeContainer {
   display: flex;
   flex-direction: column;
-  width: 130rem !important;
-  padding-inline: calc((100vw - 130rem) / 2);
+  // padding-inline: calc((100vw - 130rem) / 2 + 4rem);
+  // width: 100vw;
 
   align-items: start;
   .homeElement {
@@ -278,5 +268,22 @@ span.account {
     }
   }
 }
-=======
->>>>>>> origin/master
+
+.editWishList {
+  white-space: nowrap;
+}
+
+.page {
+  position: relative;
+}
+
+.outerContainer {
+  min-width: 100vw;
+  background-color: #eee;
+  position: absolute;
+  left: 20rem;
+}
+
+.home {
+  position: relative;
+}
