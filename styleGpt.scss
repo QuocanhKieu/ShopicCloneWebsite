@@ -1,6 +1,6 @@
 $var-color1: #f5f5f5;
 $var-color3: #fff;
-$var-color2: #0c0c17;
+$var-color2: #202020;
 $var-color4: #ececec;
 $var-color5: #959595;
 $var-color6: #fd0202;
@@ -24,7 +24,17 @@ html {
 body {
   font-size: 1.6rem;
   color: #000;
-  background: linear-gradient(180deg, $var-color1 36%, $var-color3 36%);
+  background: linear-gradient(
+    180deg,
+    $var-color1 8%,
+    $var-color3 8%,
+    $var-color3 20%,
+    $var-color2 20%,
+    $var-color2 26.5%,
+    $var-color4 26.5%,
+    $var-color4 100%
+  );
+  height: 100vh;
 }
 
 @mixin eighty {
@@ -131,7 +141,7 @@ img[alt="logo"] {
 }
 
 .navBar {
-  a {
+  > a {
     color: white;
     margin-right: 3rem;
     padding-block: 1rem;
@@ -145,6 +155,19 @@ img[alt="logo"] {
     &:hover {
       @include NavHoverStyles;
     }
+  }
+  > div {
+    color: white;
+    margin-right: 3rem;
+    padding-block: 1rem;
+    @mixin NavHoverStyles {
+      border-bottom: 0.3rem solid $var-color6;
+      color: $var-color6;
+    }
+    &:hover {
+      @include NavHoverStyles;
+    }
+    cursor: pointer;
   }
 }
 
@@ -196,60 +219,203 @@ span.account {
 
 .navBar {
   display: flex;
+  z-index: 2;
   a:nth-child(-n + 3) {
     // background-color: green;
     > div {
       // height: 100px;
       padding-bottom: 8rem;
-      visibility: hidden;
-      opacity: 0;
+
       width: 100%;
       max-width: 130rem;
       margin: auto;
       left: 0;
       right: 0;
+      visibility: hidden;
+      opacity: 0;
       transform: translateY(5rem);
       transition: all 0.3s ease-in-out;
     }
     &:hover > div {
       visibility: visible;
       opacity: 1;
-      transform: translateY(1.3rem);
+      transform: translateY(1.6rem);
     }
   }
 }
-.home.Container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 30rem;
-  align-items: start;
-  align-content: start;
-
-  > div {
-    background-color: green;
-    width: 20rem;
-  }
+.homeContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  position: relative;
+  height: 20rem;
   cursor: default;
   width: 80%;
   margin: auto;
   @include eighty;
   padding-inline: 2rem;
   align-items: start;
+  > * {
+    border-bottom: none;
+  }
+  .homeImgAnchor {
+    display: inline-block;
+    grid-column: 4/6;
+    grid-row: 1/6;
+    width: 100%;
+    height: 120%;
+    position: relative;
+
+    text-decoration: none;
+    border-bottom: none;
+    background: $var-color7;
+    padding: 0;
+    border: 0;
+    &:hover > div {
+      color: $var-color9;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    div {
+      font-weight: 400;
+      position: absolute;
+      padding-inline: 2rem;
+      padding-block: 1rem;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: none !important;
+      background-color: $var-color5;
+      color: $var-color3;
+    }
+  }
+
+  > div {
+    width: 15rem;
+  }
   .homeElement {
     color: $var-color2;
-    margin-block: 0.5rem;
     cursor: normal;
 
     a:hover {
       color: $var-color9;
+      .red {
+        padding-inline: 0.25rem;
+        background-color: $var-color9;
+        margin-right: 1rem;
+        margin-left: 0rem;
+      }
     }
-    .red:hover {
-      padding-inline: 0.25rem;
-      background-color: $var-color9;
-      margin-right: 1rem;
-      margin-left: 0rem;
+
+    .red {
+      display: inline-block;
+      height: 0.6rem;
+      background: $var-color2;
+      margin-right: 0.1rem;
+      margin-left: 0.25rem;
+      transition: all 0.3s ease-in-out;
     }
+
+    a {
+      color: inherit;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $var-color9;
+      }
+    }
+  }
+  > * {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(5rem);
+    transition: all 0.3s ease-in-out 0.15s;
+  }
+}
+
+.editWishList {
+  white-space: nowrap;
+}
+
+.outerContainer {
+  min-width: 100vw;
+  background-color: $var-color1;
+  position: absolute;
+  left: 0;
+  top: 17rem;
+  z-index: 0;
+  cursor: auto !important;
+}
+
+a.homeAnchor {
+  position: unset !important;
+}
+
+// shopContainer
+.shopContainer {
+  @include eighty;
+  display: flex;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    align-items: start;
+  }
+
+  position: relative;
+  // top: -1.5rem;
+  cursor: default;
+  padding-inline: 2rem;
+  // align-items: start;
+  .shopImgAnchor {
+    width: 40%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+    border-bottom: none;
+    padding: 0;
+    border: 0;
+    margin-top: 1.5rem;
+    &:hover > div {
+      color: $var-color9;
+    }
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+    div {
+      font-weight: 400;
+      position: absolute;
+      padding-inline: 2rem;
+      padding-block: 1rem;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: none !important;
+      color: $var-color3;
+      background-color: $var-color5;
+    }
+  }
+  > div {
+    width: 20rem;
+    color: $var-color2;
+    cursor: normal;
+    a:hover {
+      cursor: pointer;
+      color: $var-color9;
+      .red {
+        padding-inline: 0.25rem;
+        background-color: $var-color9;
+        margin-right: 1rem;
+        margin-left: 0rem;
+      }
+    }
+
     .red {
       display: inline-block;
       height: 0.6rem;
@@ -261,30 +427,69 @@ span.account {
     }
 
     a {
-      border: none;
       color: inherit;
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        border: none;
         color: $var-color9;
       }
     }
   }
+  > div > * {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: all 0.3s ease-in-out 0.15s;
+  }
 }
 
-.editWishList {
-  white-space: nowrap;
+a.shopAnchor:hover * {
+  visibility: visible;
+  opacity: 1;
+}
+.page {
+  position: relative;
 }
 
-.outerContainer {
-  min-width: 100vw;
-  background-color: #eee;
+div.pageList {
+  cursor: default;
   position: absolute;
-  left: 20rem;
-  left: 0;
+  background: $var-color1;
+  width: max-content;
+  padding: 1.5rem;
+  color: $var-color2;
+  a:hover {
+    cursor: pointer;
+    color: $var-color9;
+    .red {
+      padding-inline: 0.25rem;
+      background-color: $var-color9;
+      margin-right: 1rem;
+      margin-left: 0rem;
+    }
+  }
+  .red {
+    display: inline-block;
+    height: 0.6rem;
+    background: $var-color2;
+    margin-right: 0.1rem;
+
+    margin-left: 0.25rem;
+    transition: all 0.3s ease-in-out;
+  }
+  & > * {
+    display: block;
+    margin-block: 1rem;
+  }
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+  transition: all 0.3s ease-in-out;
+  
 }
 
-a.home {
-  position: unset !important;
+div.page:hover .pageList{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(1.3rem );
 }
