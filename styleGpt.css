@@ -45,10 +45,6 @@ header {
   padding-block: 1.6rem;
 }
 
-.inner {
-  padding-inline: 2rem;
-}
-
 .searchBoxContainer {
   background-color: #ececec;
   display: flex;
@@ -126,9 +122,6 @@ img[alt=logo] {
   border-bottom: 0.3rem solid #fd0202;
   color: #fd0202;
 }
-.navBar a:nth-child(-n+3)::after {
-  content: "+";
-}
 
 span.account {
   position: relative;
@@ -173,7 +166,6 @@ span.account .acountBoard:hover {
   display: flex;
 }
 .navBar a:nth-child(-n+3) > div {
-  position: absolute;
   padding-bottom: 8rem;
   visibility: hidden;
   opacity: 0;
@@ -185,36 +177,49 @@ span.account .acountBoard:hover {
   transform: translateY(5rem);
   transition: all 0.3s ease-in-out;
 }
-.navBar a:nth-child(-n+3) > div.third {
-  background-color: #ff0000;
-  left: unset;
-  right: unset;
-}
 .navBar a:nth-child(-n+3):hover > div {
   visibility: visible;
   opacity: 1;
   transform: translateY(1.3rem);
 }
 
-.homeContainer {
+.home.Container {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  height: 30rem;
+  align-items: start;
+  align-content: start;
+  cursor: default;
+  width: 80%;
+  margin: auto;
+  width: 100%;
+  max-width: 130rem;
+  padding-inline: 2rem;
+  box-sizing: border-box;
+  margin: auto;
+  padding-inline: 2rem;
   align-items: start;
 }
-.homeContainer .homeElement {
+.home.Container > div {
+  background-color: green;
+  width: 20rem;
+}
+.home.Container .homeElement {
   color: #0c0c17;
   margin-block: 0.5rem;
+  cursor: normal;
 }
-.homeContainer .homeElement:hover {
+.home.Container .homeElement a:hover {
   color: #ff0000;
 }
-.homeContainer .homeElement:hover .red {
+.home.Container .homeElement .red:hover {
   padding-inline: 0.25rem;
   background-color: #ff0000;
   margin-right: 1rem;
   margin-left: 0rem;
 }
-.homeContainer .homeElement .red {
+.home.Container .homeElement .red {
   display: inline-block;
   height: 0.6rem;
   background: #0c0c17;
@@ -222,12 +227,12 @@ span.account .acountBoard:hover {
   margin-left: 0.25rem;
   transition: all 0.3s ease-in-out;
 }
-.homeContainer .homeElement a {
+.home.Container .homeElement a {
   border: none;
   color: inherit;
   transition: all 0.3s ease-in-out;
 }
-.homeContainer .homeElement a:hover {
+.home.Container .homeElement a:hover {
   border: none;
   color: #ff0000;
 }
@@ -236,17 +241,14 @@ span.account .acountBoard:hover {
   white-space: nowrap;
 }
 
-.page {
-  position: relative;
-}
-
 .outerContainer {
   min-width: 100vw;
   background-color: #eee;
   position: absolute;
   left: 20rem;
+  left: 0;
 }
 
-.home {
-  position: relative;
+a.home {
+  position: unset !important;
 }/*# sourceMappingURL=styleGpt.css.map */
