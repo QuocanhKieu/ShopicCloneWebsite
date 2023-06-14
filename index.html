@@ -17,6 +17,17 @@
       src="https://kit.fontawesome.com/45aafb0278.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Required Core stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+
+    <!-- Optional Theme stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
   </head>
   <body>
     <section class="pageContainer">
@@ -78,21 +89,124 @@
             <div class="shopContainer"></div>
           </div>
         </a>
-        <div href="#" class="page">PAGE +
+        <div href="#" class="page">
+          PAGE +
           <div class="pageList">
-          <a href="#"><span class="red square"></span>About Us</a>
-          <a href="#"><span class="red square"></span>Brands</a>
-          <a href="#"><span class="red square"></span>Contact Us</a>
-          <a href="#"><span class="red square"></span>Wishlist</a>
-          <a href="#"><span class="red square"></span>Shipping time</a>
+            <a href="#"><span class="red square"></span>About Us</a>
+            <a href="#"><span class="red square"></span>Brands</a>
+            <a href="#"><span class="red square"></span>Contact Us</a>
+            <a href="#"><span class="red square"></span>Wishlist</a>
+            <a href="#"><span class="red square"></span>Shipping time</a>
+          </div>
         </div>
-      </div>
-        
+
         <a href="#" class="blog">BLOG</a>
         <a href="#" class="contact">CONTACT</a>
       </nav>
     </section>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <div class="slide-content">
+              <div class="textContainer">
+                <span class="abs span red">Limited stock</span>
+                <h1 class="abs h1 red">CARBON<br />WHEELS BUILT</h1>
+                <div class="startingAt abs red">
+                  STARTING AT<br />
+                  <h2>$1885</h2>
+                </div>
+                <a href="#" class="abs shopNow red">
+                  <div>Shop Now</div>
+                </a>
+              </div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0686/0878/6747/files/revslider_h1-bg1.jpg?v=1670322402&width=1920"
+                alt="redBicycle"
+                class="redBicycle"
+              />
+            </div>
+          </li>
+          <li class="glide__slide">
+            <div class="slide-content">
+              <div class="textContainer">
+                <span class="abs span white">Limited stock</span>
+                <h1 class="abs h1 white">CARBON<br />WHEELS BUILT</h1>
+                <div class="startingAt abs white">
+                  STARTING AT<br />
+                  <h2>$1885</h2>
+                </div>
+                <a href="#" class="abs white shopNow">
+                  <div>Shop Now</div>
+                </a>
+              </div>
+              <img
+                src="https://cdn.shopify.com/s/files/1/0686/0878/6747/files/revslider_h1-bg2_669d4841-b393-4e1a-a2a4-dbf49415117a.jpg?v=1670322539&width=1920"
+                alt="whiteBicyle"
+                class="whiteBicycle"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
 
+      <!--     <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+          </div> -->
+
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">
+          <
+        </button>
+        <button class="glide__arrow glide__arrow--next" data-glide-dir=">">
+          >
+        </button>
+      </div>
+    </div>
+    <!-- byCategory -->
+    <section class="categoriesBox">
+      <h1 class="byCategoryBox">
+        <div class="bigSquare"></div>
+        <div class="head">
+          <span>SHOP BY CATEGORY</span>
+          <span>BIKE STORE & RENTAL SERVICES
+        </div>
+      </h1>
+      <div class="categories">
+        <div class="category">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0686/0878/6747/files/h1_cta-1_bba0c973-d407-41f9-bccc-3fc8e8dbd263.jpg?v=1670380704&width=2000">
+            <a href="#">MOUNTAIN BIKES</a>
+          </a>
+          <span>Save up to <span>40% Off</span></span>
+        </div>
+        <div class="category">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0686/0878/6747/files/h1_cta-2.jpg?v=1670380704&width=2000">
+          </a>
+          <a href="#">ROAD BIKES</a>
+          <span>Your ride start here.</span>
+        </div>
+        <div class="category">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0686/0878/6747/files/h1_cta-3.jpg?v=1670380704&width=2000">
+            <a href="#">TRAINER DEALS</a>
+          </a>
+          <span>The right trainer for you</span>
+        </div>
+      </div>
+    </section>
+    <!-- byCategory -->
+
+
+
+
+
+
+    
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="style.js"></script>
   </body>
 </html>

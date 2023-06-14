@@ -13,12 +13,14 @@ $var-color9: #ff0000;
 ::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
+  width: 100%;
 }
 
 body {
@@ -34,7 +36,7 @@ body {
     $var-color4 26.5%,
     $var-color4 100%
   );
-  height: 100vh;
+  height: 200vh;
 }
 
 @mixin eighty {
@@ -175,6 +177,7 @@ span.account {
   position: relative;
   padding-bottom: 1rem;
   .acountBoard {
+    z-index: 2;
     position: absolute;
     display: flex;
     box-sizing: border-box;
@@ -221,6 +224,7 @@ span.account {
   display: flex;
   z-index: 2;
   a:nth-child(-n + 3) {
+    z-index: 2;
     // background-color: green;
     > div {
       // height: 100px;
@@ -341,7 +345,7 @@ span.account {
 }
 
 .outerContainer {
-  min-width: 100vw;
+  min-width: 100%;
   background-color: $var-color1;
   position: absolute;
   left: 0;
@@ -449,6 +453,7 @@ a.shopAnchor:hover * {
 }
 .page {
   position: relative;
+  z-index: 2;
 }
 
 div.pageList {
@@ -485,11 +490,312 @@ div.pageList {
   visibility: hidden;
   transform: translateY(5rem);
   transition: all 0.3s ease-in-out;
-  
 }
 
-div.page:hover .pageList{
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(1.3rem );
+div.page:hover .pageList {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(1.3rem);
 }
+
+//carousel stylings Start
+
+// Container styles
+.glide {
+  margin: 0 auto;
+  width: 100%;
+  // height: 635px;
+
+}
+
+// Slide styles
+.glide__slide {
+  background-color: #ccc;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+  width: 100%;
+}
+
+.glide__slides {
+  overflow: hidden;
+}
+
+// Slide content styles
+.slide-content {
+  height: 635px; // chỉ chỉnh height của img ở đây
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .redBicycle {
+    transform: scale(1.2);
+  }
+
+  // Active slide content img styles
+  .glide__slide.glide__slide--active & {
+    img.whiteBicycle {
+      transform: scale(1.2);
+      transition: transform 3s ease-in-out;
+    }
+
+    img.redBicycle {
+      transform: scale(1);
+      transition: transform 3s ease-in-out;
+    }
+  }
+
+  // textTransition styles
+  .glide__slide.glide__slide--active & {
+    .abs.span.red {
+      left: 20px;
+      transition: left 0.5s ease-in-out 0.1s;
+    }
+
+    .abs.h1.red {
+      left: 20px;
+      transition: left 0.5s ease-in-out 0.5s;
+    }
+
+    .abs.startingAt.red {
+      left: 20px;
+      transition: left 0.5s ease-in-out 0.9s;
+    }
+
+    .abs.shopNow.red {
+      left: 20px;
+      transition: left 0.5s ease-in-out 1.3s;
+    }
+
+    .abs.span.white {
+      top: 40px;
+      transition: top 0.5s ease-in-out 0.1s;
+    }
+
+    .abs.h1.white {
+      top: 110px;
+      transition: top 0.5s ease-in-out 0.5s;
+    }
+
+    .abs.startingAt.white {
+      top: 360px;
+      transition: top 0.5s ease-in-out 0.9s;
+    }
+
+    .abs.shopNow.white {
+      top: 500px;
+      transition: top 0.5s ease-in-out 1.3s;
+    }
+  }
+}
+
+// Glide arrows styles
+.glide__arrows {
+  position: relative;
+  top: -350px;
+}
+
+.glide__arrow {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 1.2em;
+  outline: none;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  opacity: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.glide__arrow--next {
+  right: 0;
+}
+
+.glide__slides {
+  display: flex;
+  flex: 0 0 100%;
+  column-gap: 0;
+}
+
+// Text first position styles
+.abs.red {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: 100%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.abs.white {
+  position: absolute;
+  top: -100%;
+  z-index: 1;
+  left: 20px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.textContainer {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.shopNow {
+  display: block;
+  text-decoration: none;
+
+  > div {
+    padding: 1.5rem 3rem;
+    color: black;
+    background: white;
+    transition: all 0.5s;
+  }
+
+  &:hover div {
+    color: white;
+    background: red;
+  }
+}
+
+.startingAt {
+  padding-left: 10px;
+  border-left: 1px solid red;
+  font-size: 0.7em;
+
+  h2 {
+    margin: 0;
+    color: red;
+    font-size: 3.5em;
+  }
+}
+
+.abs.span {
+  color: red;
+}
+
+.abs.h1 {
+  margin: 0;
+  font-size: 3.5em;
+}
+
+// Top of each .red at start styles
+.abs.red:nth-child(1) {
+  top: 40px;
+}
+
+.abs.red:nth-child(2) {
+  top: 110px;
+}
+
+.abs.red:nth-child(3) {
+  top: 360px;
+}
+
+.abs.red:nth-child(4) {
+  top: 500px;
+}
+// Carousel End
+// byCategory
+$red-color: #fd0202;
+
+.categoriesBox {
+  margin-top: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.byCategoryBox {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  display: flex;
+  column-gap: 20px;
+  align-items: stretch;
+  font-size: 2.5em;
+  .bigSquare {
+    padding: 25px 30px;
+    margin-top: 15px;
+    background: $red-color;
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span:nth-child(2) {
+      font-size: 0.4em;
+    }
+  }
+}
+
+.categories {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  margin-block: 50px 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      top: 75%;
+      background: red;
+      bottom: 25%;
+      transition: bottom 0.5s;
+    }
+    &:hover::after {
+      bottom: 10%;
+    }
+    &:hover a {
+      color: red;
+    }
+
+    img {
+      transition: transform 0.5s;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
+    // overflow: hidden;
+    a {
+      text-decoration: none;
+      color: black;
+      margin-block: 1.3rem 0.3rem;
+      font-weight: 800;
+    }
+    span {
+      color: Gray;
+      span {
+        color: red;
+      }
+    }
+  }
+}
+// byCategory

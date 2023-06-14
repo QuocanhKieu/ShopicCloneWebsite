@@ -199,3 +199,64 @@ shopContainer.append(
 //   transform: translateY(5rem)
 //   `;
 // })
+
+//carousel styles start
+// document.addEventListener("DOMContentLoaded", function () {
+
+// });
+
+const glide = new Glide(".glide", {
+  type: "carousel",
+  startAt: 0,
+  perView: 1,
+  autoplay: 0,
+  rewind: false,
+  animationDuration: 900,
+});
+
+glide.mount();
+
+const glide__slides = document.querySelector(".glide__slides");
+const glide__arrowPre = document.querySelector(".glide__arrow--prev");
+const glide__arrowNxt = document.querySelector(".glide__arrow--next");
+const carouselButtons = [glide__arrowPre, glide__arrowNxt];
+
+//rouselButtons hover effect
+carouselButtons.forEach((item) => {
+  item.addEventListener("mouseover", (event) => {
+    item.style.cssText = `
+    background: white;
+    color: black;
+    opacity: 1;
+    `;
+  });
+  item.addEventListener("mouseout", (event) => {
+    item.style.cssText = `
+    background: transparent;
+    color: white;
+    opacity: 0;
+    `;
+  });
+});
+
+glide__slides.addEventListener("mouseover", (event) => {
+  glide__arrowPre.style.cssText = `
+  opacity: 1;
+  `;
+
+  glide__arrowNxt.style.cssText = `
+  opacity: 1;
+  `;
+});
+
+glide__slides.addEventListener("mouseout", (event) => {
+  glide__arrowPre.style.cssText = `
+  opacity: 0;
+  `;
+
+  glide__arrowNxt.style.cssText = `
+  opacity: 0;
+  `;
+});
+//byCategory
+
