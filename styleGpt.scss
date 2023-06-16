@@ -26,16 +26,16 @@ html {
 body {
   font-size: 1.6rem;
   color: #000;
-  background: linear-gradient(
-    180deg,
-    $var-color1 8%,
-    $var-color3 8%,
-    $var-color3 20%,
-    $var-color2 20%,
-    $var-color2 26.5%,
-    $var-color4 26.5%,
-    $var-color4 100%
-  );
+  // background: linear-gradient(
+  //   180deg,
+  //   $var-color1 8%,
+  //   $var-color3 8%,
+  //   $var-color3 20%,
+  //   $var-color2 20%,
+  //   $var-color2 26.5%,
+  //   $var-color4 26.5%,
+  //   $var-color4 100%
+  // );
   height: 200vh;
 }
 
@@ -499,51 +499,48 @@ div.page:hover .pageList {
 }
 
 //carousel stylings Start
-
-// Container styles
-.glide {
+.glide#carousel-1 {
+  // Container styles
   margin: 0 auto;
   width: 100%;
   // height: 635px;
 
-}
-
-// Slide styles
-.glide__slide {
-  background-color: #ccc;
-  text-align: center;
-  padding: 0;
-  color: #fff;
-  font-size: 24px;
-  width: 100%;
-}
-
-.glide__slides {
-  overflow: hidden;
-}
-
-// Slide content styles
-.slide-content {
-  height: 635px; // chỉ chỉnh height của img ở đây
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  img {
-    height: 100%;
+  // Slide styles
+  .glide__slide {
+    background-color: #ccc;
+    text-align: center;
+    padding: 0;
+    color: #fff;
+    font-size: 24px;
     width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
-  .redBicycle {
-    transform: scale(1.2);
+  .glide__slides {
+    overflow: hidden;
   }
 
+  // Slide content styles
+  .slide-content {
+    height: 635px; // chỉ chỉnh height của img ở đây
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .redBicycle {
+      transform: scale(1.2);
+    }
+  }
   // Active slide content img styles
-  .glide__slide.glide__slide--active & {
+  .glide__slide.glide__slide--active {
     img.whiteBicycle {
       transform: scale(1.2);
       transition: transform 3s ease-in-out;
@@ -553,10 +550,6 @@ div.page:hover .pageList {
       transform: scale(1);
       transition: transform 3s ease-in-out;
     }
-  }
-
-  // textTransition styles
-  .glide__slide.glide__slide--active & {
     .abs.span.red {
       left: 20px;
       transition: left 0.5s ease-in-out 0.1s;
@@ -597,122 +590,123 @@ div.page:hover .pageList {
       transition: top 0.5s ease-in-out 1.3s;
     }
   }
-}
 
-// Glide arrows styles
-.glide__arrows {
-  position: relative;
-  top: -350px;
-}
-
-.glide__arrow {
-  position: absolute;
-  top: 0;
-  border-radius: 50%;
-  display: block;
-  width: 50px;
-  height: 50px;
-  font-weight: 400;
-  font-size: 1.2em;
-  outline: none;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  opacity: 0;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.glide__arrow--next {
-  right: 0;
-}
-
-.glide__slides {
-  display: flex;
-  flex: 0 0 100%;
-  column-gap: 0;
-}
-
-// Text first position styles
-.abs.red {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  left: 100%;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.abs.white {
-  position: absolute;
-  top: -100%;
-  z-index: 1;
-  left: 20px;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.textContainer {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.shopNow {
-  display: block;
-  text-decoration: none;
-
-  > div {
-    padding: 1.5rem 3rem;
-    color: black;
-    background: white;
-    transition: all 0.5s;
+  // Glide arrows styles
+  .glide__arrows {
+    position: relative;
+    top: -350px;
   }
 
-  &:hover div {
+  .glide__arrow {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    font-weight: 400;
+    font-size: 1.2em;
+    outline: none;
+    border: 1px solid white;
+    background: transparent;
     color: white;
-    background: red;
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer;
   }
-}
 
-.startingAt {
-  padding-left: 10px;
-  border-left: 1px solid red;
-  font-size: 0.7em;
+  .glide__arrow--next {
+    right: 0;
+  }
 
-  h2 {
-    margin: 0;
+  .glide__slides {
+    display: flex;
+    flex: 0 0 100%;
+    column-gap: 0;
+  }
+
+  // Text first position styles
+  .abs.red {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    left: 100%;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .abs.white {
+    position: absolute;
+    top: -100%;
+    z-index: 1;
+    left: 20px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .textContainer {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shopNow {
+    display: block;
+    text-decoration: none;
+
+    > div {
+      padding: 1.5rem 3rem;
+      color: black;
+      background: white;
+      transition: all 0.5s;
+    }
+
+    &:hover div {
+      color: white;
+      background: red;
+    }
+  }
+
+  .startingAt {
+    padding-left: 10px;
+    border-left: 1px solid red;
+    font-size: 0.7em;
+
+    h2 {
+      margin: 0;
+      color: red;
+      font-size: 3.5em;
+    }
+  }
+
+  .abs.span {
     color: red;
+  }
+
+  .abs.h1 {
+    margin: 0;
     font-size: 3.5em;
   }
+
+  // Top of each .red at start styles
+  .abs.red:nth-child(1) {
+    top: 40px;
+  }
+
+  .abs.red:nth-child(2) {
+    top: 110px;
+  }
+
+  .abs.red:nth-child(3) {
+    top: 360px;
+  }
+
+  .abs.red:nth-child(4) {
+    top: 500px;
+  }
+  // Carousel End
 }
 
-.abs.span {
-  color: red;
-}
-
-.abs.h1 {
-  margin: 0;
-  font-size: 3.5em;
-}
-
-// Top of each .red at start styles
-.abs.red:nth-child(1) {
-  top: 40px;
-}
-
-.abs.red:nth-child(2) {
-  top: 110px;
-}
-
-.abs.red:nth-child(3) {
-  top: 360px;
-}
-
-.abs.red:nth-child(4) {
-  top: 500px;
-}
-// Carousel End
 // byCategory
 $red-color: #fd0202;
 
@@ -799,3 +793,74 @@ $red-color: #fd0202;
   }
 }
 // byCategory
+// <!-- OrangeBike Start -->
+.bigImgTextContainer {
+  // margin-inline: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+  img {
+    display: block;
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    transition: all 0.2s;
+  }
+  &:hover .abs:nth-child(2)::after {
+    bottom: 10%;
+  }
+  &:hover .abs:nth-child(2) {
+    padding-left: 20px;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+  .abs {
+    z-index: 1;
+    position: absolute;
+    left: 80px;
+    color: white;
+
+    &:nth-child(1) {
+      top: 200px;
+      font-size: 1.5em;
+    }
+    &:nth-child(2) {
+      top: 250px;
+      transition: all 0.5s;
+      font-size: 2.5em;
+      span {
+        color: red;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 0;
+        bottom: 90%;
+        width: 5px;
+        background: red;
+        transition: bottom 0.2s;
+      }
+    }
+    &:nth-child(3) {
+      top: 450px;
+      font-size: 1.5em;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      background: transparent;
+      border: 2px solid red;
+      color: red;
+      transition: all 0.3s;
+    }
+    &:nth-child(3):hover {
+      background: red;
+      color: white;
+    }
+  }
+}
+
+// <!-- OrangeBike End -->

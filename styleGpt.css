@@ -16,7 +16,6 @@ html {
 body {
   font-size: 1.6rem;
   color: #000;
-  background: linear-gradient(180deg, #f5f5f5 8%, #fff 8%, #fff 20%, #202020 20%, #202020 26.5%, #ececec 26.5%, #ececec 100%);
   height: 200vh;
 }
 
@@ -449,12 +448,11 @@ div.page:hover .pageList {
   transform: translateY(1.3rem);
 }
 
-.glide {
+.glide#carousel-1 {
   margin: 0 auto;
   width: 100%;
 }
-
-.glide__slide {
+.glide#carousel-1 .glide__slide {
   background-color: #ccc;
   text-align: center;
   padding: 0;
@@ -462,18 +460,16 @@ div.page:hover .pageList {
   font-size: 24px;
   width: 100%;
 }
-
-.glide__slides {
+.glide#carousel-1 .glide__slides {
   overflow: hidden;
 }
-
-.slide-content {
+.glide#carousel-1 .slide-content {
   height: 635px;
   width: 100%;
   position: relative;
   overflow: hidden;
 }
-.slide-content img {
+.glide#carousel-1 .slide-content img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -482,56 +478,54 @@ div.page:hover .pageList {
   top: 0;
   left: 0;
 }
-.slide-content .redBicycle {
+.glide#carousel-1 .slide-content .redBicycle {
   transform: scale(1.2);
 }
-.glide__slide.glide__slide--active .slide-content img.whiteBicycle {
+.glide#carousel-1 .glide__slide.glide__slide--active img.whiteBicycle {
   transform: scale(1.2);
   transition: transform 3s ease-in-out;
 }
-.glide__slide.glide__slide--active .slide-content img.redBicycle {
+.glide#carousel-1 .glide__slide.glide__slide--active img.redBicycle {
   transform: scale(1);
   transition: transform 3s ease-in-out;
 }
-.glide__slide.glide__slide--active .slide-content .abs.span.red {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.span.red {
   left: 20px;
   transition: left 0.5s ease-in-out 0.1s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.h1.red {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.h1.red {
   left: 20px;
   transition: left 0.5s ease-in-out 0.5s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.startingAt.red {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.startingAt.red {
   left: 20px;
   transition: left 0.5s ease-in-out 0.9s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.shopNow.red {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.shopNow.red {
   left: 20px;
   transition: left 0.5s ease-in-out 1.3s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.span.white {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.span.white {
   top: 40px;
   transition: top 0.5s ease-in-out 0.1s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.h1.white {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.h1.white {
   top: 110px;
   transition: top 0.5s ease-in-out 0.5s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.startingAt.white {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.startingAt.white {
   top: 360px;
   transition: top 0.5s ease-in-out 0.9s;
 }
-.glide__slide.glide__slide--active .slide-content .abs.shopNow.white {
+.glide#carousel-1 .glide__slide.glide__slide--active .abs.shopNow.white {
   top: 500px;
   transition: top 0.5s ease-in-out 1.3s;
 }
-
-.glide__arrows {
+.glide#carousel-1 .glide__arrows {
   position: relative;
   top: -350px;
 }
-
-.glide__arrow {
+.glide#carousel-1 .glide__arrow {
   position: absolute;
   top: 0;
   border-radius: 50%;
@@ -548,19 +542,16 @@ div.page:hover .pageList {
   transition: all 0.5s;
   cursor: pointer;
 }
-
-.glide__arrow--next {
+.glide#carousel-1 .glide__arrow--next {
   right: 0;
 }
-
-.glide__slides {
+.glide#carousel-1 .glide__slides {
   display: flex;
   flex: 0 0 100%;
   -moz-column-gap: 0;
        column-gap: 0;
 }
-
-.abs.red {
+.glide#carousel-1 .abs.red {
   position: absolute;
   top: 0;
   z-index: 1;
@@ -568,8 +559,7 @@ div.page:hover .pageList {
   text-align: left;
   white-space: nowrap;
 }
-
-.abs.white {
+.glide#carousel-1 .abs.white {
   position: absolute;
   top: -100%;
   z-index: 1;
@@ -577,61 +567,52 @@ div.page:hover .pageList {
   text-align: left;
   white-space: nowrap;
 }
-
-.textContainer {
+.glide#carousel-1 .textContainer {
   height: 100%;
   position: relative;
   overflow: hidden;
 }
-
-.shopNow {
+.glide#carousel-1 .shopNow {
   display: block;
   text-decoration: none;
 }
-.shopNow > div {
+.glide#carousel-1 .shopNow > div {
   padding: 1.5rem 3rem;
   color: black;
   background: white;
   transition: all 0.5s;
 }
-.shopNow:hover div {
+.glide#carousel-1 .shopNow:hover div {
   color: white;
   background: red;
 }
-
-.startingAt {
+.glide#carousel-1 .startingAt {
   padding-left: 10px;
   border-left: 1px solid red;
   font-size: 0.7em;
 }
-.startingAt h2 {
+.glide#carousel-1 .startingAt h2 {
   margin: 0;
   color: red;
   font-size: 3.5em;
 }
-
-.abs.span {
+.glide#carousel-1 .abs.span {
   color: red;
 }
-
-.abs.h1 {
+.glide#carousel-1 .abs.h1 {
   margin: 0;
   font-size: 3.5em;
 }
-
-.abs.red:nth-child(1) {
+.glide#carousel-1 .abs.red:nth-child(1) {
   top: 40px;
 }
-
-.abs.red:nth-child(2) {
+.glide#carousel-1 .abs.red:nth-child(2) {
   top: 110px;
 }
-
-.abs.red:nth-child(3) {
+.glide#carousel-1 .abs.red:nth-child(3) {
   top: 360px;
 }
-
-.abs.red:nth-child(4) {
+.glide#carousel-1 .abs.red:nth-child(4) {
   top: 500px;
 }
 
@@ -714,4 +695,71 @@ div.page:hover .pageList {
 }
 .categories .category span span {
   color: red;
+}
+
+.bigImgTextContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+.bigImgTextContainer img {
+  display: block;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  transition: all 0.2s;
+}
+.bigImgTextContainer:hover .abs:nth-child(2)::after {
+  bottom: 10%;
+}
+.bigImgTextContainer:hover .abs:nth-child(2) {
+  padding-left: 20px;
+}
+.bigImgTextContainer:hover img {
+  transform: scale(1.1);
+}
+.bigImgTextContainer .abs {
+  z-index: 1;
+  position: absolute;
+  left: 80px;
+  color: white;
+}
+.bigImgTextContainer .abs:nth-child(1) {
+  top: 200px;
+  font-size: 1.5em;
+}
+.bigImgTextContainer .abs:nth-child(2) {
+  top: 250px;
+  transition: all 0.5s;
+  font-size: 2.5em;
+}
+.bigImgTextContainer .abs:nth-child(2) span {
+  color: red;
+}
+.bigImgTextContainer .abs:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  bottom: 90%;
+  width: 5px;
+  background: red;
+  transition: bottom 0.2s;
+}
+.bigImgTextContainer .abs:nth-child(3) {
+  top: 450px;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid red;
+  color: red;
+  transition: all 0.3s;
+}
+.bigImgTextContainer .abs:nth-child(3):hover {
+  background: red;
+  color: white;
 }/*# sourceMappingURL=styleGpt.css.map */
